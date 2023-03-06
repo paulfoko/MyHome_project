@@ -1,64 +1,67 @@
 <template>
   <footer class="footer">
-    <div class="container_footer">
-      <div class="row">
-        <div class="footer-col">
-          <h4>MyHome</h4>
-          <ul>
-            <li><a href="#">A propos</a></li>
-            <li><a href="#">Nos Service</a></li>
-            <li><a href="#">Politque de confidentielite</a></li>
-            <li><a href="#">affiliate program</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Nous Contacter</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Je suis Agents</a></li>
-            <li><a href="#">Je suis Proprietaire</a></li>
-            <li><a href="#">Autres</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>online shop</h4>
-          <ul>
-            <li><a href="#">watch</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">shoes</a></li>
-            <li><a href="#">dress</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Suivez nous</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
-  </footer>
-  <div class="copyright-text">
     <p>Copyright &copy; 2023 All Rights Reserved by <a href="#">MyHome</a>.</p>
-  </div>
+  </footer>
 </template>
 <style scoped>
-.copyright-text {
-  margin: 0;
-  padding-bottom: 10px;
-  padding-top: 7px;
-  text-align: center;
-  width: 100%;
-  color: #bbbbbb;
-  font-size: 15px;
-  background-color: #24262b;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
 }
-.copyright-text p {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+  color: #bbbbbb;
+  font-size: 10px;
+  margin-top: 10px;
 }
 .container_footer {
   max-width: 1170px;
@@ -67,10 +70,15 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  width: 80%;
 }
 .footer {
-  background-color: white;
-  padding: 70px 0;
+  background-color: #24262b;
+  padding: 60px 0 5px 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 .footer-col {
   width: 25%;
@@ -78,7 +86,7 @@
 }
 .footer-col h4 {
   font-size: 18px;
-  color: #24262b;
+  color: #ffffff;
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -103,14 +111,13 @@
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
-  color: #24262b;
+  color: #bbbbbb;
   display: block;
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover {
-  color: black;
+  color: #ffffff;
   padding-left: 8px;
-  font-weight: 600;
 }
 .footer-col .social-links a {
   display: inline-block;
@@ -121,12 +128,12 @@
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #24262b;
+  color: #ffffff;
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover {
-  color: #ffffff;
-  background-color: #24262b;
+  color: #24262b;
+  background-color: #ffffff;
 }
 
 /*responsive*/
