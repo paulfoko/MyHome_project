@@ -1,24 +1,47 @@
-<script setup>
-import Navbar from "../components/nav_bar.vue";
-import Footer from "../components/footer.vue";
-import Element from "../components/house.vue";
-</script>
 <template>
-  <div class="navbar"><Navbar /></div>
-  <section class="section_house">
-    <Element />
-  </section>
-  <Footer />
+  <div class="Parcourir">
+      <RouterLink v-for="(product, index) in products" :key="index" :to="`/product/${product.id}`">
+          <Productcard  :img="product.image" >
+         <template #title>{{ product.title }}</template>
+         <template #price>{{ product.price }} euros</template>
+      </Productcard>
+
+
+      </RouterLink>
+    
+     
+      
+    
+   
+  </div>
+  
 </template>
+
+<script setup>
+import Productcard from '../components/Productcard.vue';
+import { onMounted, ref } from "vue";
+
+const products = ref ([]);
+
+fetch('https://fakestoreapi.com/products')
+  .then((response) => response.json())
+  .then((data) => {
+     
+      products.value = data})
+
+
+</script>
+
 <style scoped>
-.navbar {
-  background-color: rgba(0, 0, 0, 0.808);
-  width: 100vw;
-  max-height: fix-content;
-}
-.section_house {
-  margin: 20px;
-  padding: 0;
-  justify-content: flex-start;
+.Parcourir{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+ 
+  
+  
 }
 </style>
